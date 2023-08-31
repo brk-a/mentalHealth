@@ -12,6 +12,8 @@ tail(dataset)
 if (!require(tidyverse)) install.packages("tidyverse", repos='http://cran.us.r-project.org', dependencies=T)
 library(tidyverse)
 
+# ** GAD
+
 #get relevant columns
 dataset <- dataset %>%
     dataset <- dataset %>%
@@ -38,7 +40,7 @@ head(sw_0)
 tail(sw_0)
 pop_GAD_mean <- mean(sw_0$TotalGAD) # 8.11 -> Mild
 
-#looking at severity
+#looking at severity (percentage severity of pop per severity level)
 sw_1 <- sw_0 %>%
   select(everything()) %>%
   group_by(Severity) %>%
@@ -140,3 +142,119 @@ if (!require(corrplot)) install.packages("corrplot", repos='http://cran.us.r-pro
 library(corrplot)
 corrplot(cor_matrix, method="color", order='hclust', addrect=2, addCoef.col = 'black', tl.pos = 'd',
          cl.pos = 'r', col = COL2('RdYlBu'))
+
+
+# ** PHQ
+
+#get relevant columns
+dataset_phq <- dataset %>%
+  select(1, 2, 3, 4, 5, 6, 7, 8, 9, 29, 30, 32, 33)
+
+head(dataset_phq)
+
+#score for each participant 
+sw_11 <- dataset_phq %>%
+  select(1, 2, 3, 4, 5, 6, 7, 8, 9, everything()) %>%
+  mutate(TotalPHQ = rowSums(dataset_phq[2:9], na.rm=TRUE)) %>%
+  mutate(Severity = case_when (
+    TotalPHQ < 5 ~ "Mild",
+    TotalPHQ < 10 ~ "Moderate",
+    TotalPHQ < 15 ~ "Moderate-severe",
+    TotalPHQ >= 15 ~ "Severe",
+    TRUE ~ NA_character_
+  ))
+
+head(sw_11)
+tail(sw_11)
+
+# mean by groups
+
+#pop mean
+pop_PHQ_mean <- mean(sw_11$TotalPHQ) # 9.23 -> Moderate
+
+pop_PHQ_mean
+
+#mean by severity (average severity of pop per severity level)
+sw_12 <- sw_11 %>%
+  select(everything()) %>%
+  group_by(Severity) %>%
+  summarise(Mean = mean(TotalPHQ))
+
+sw_12
+
+#mean by school resources
+sw_13 <- sw_11 %>%
+  select(everything()) %>%
+  group_by(School_Resources) %>%
+  summarise(Mean = mean(TotalPHQ))
+
+sw_13
+
+#mean by age
+sw_14 <- sw_11 %>%
+  select(everything()) %>%
+  group_by(Age) %>%
+  summarise(Mean = mean(TotalPHQ))
+
+sw_14
+
+#mean by gender
+sw_15 <- sw_11 %>%
+  select(everything()) %>%
+  group_by(Gender) %>%
+  summarise(Mean = mean(TotalPHQ))
+
+sw_15
+
+#mean by tribe
+sw_16 <- sw_11 %>%
+  select(everything()) %>%
+  group_by(Tribe) %>%
+  summarise(Mean = mean(TotalPHQ))
+
+sw_16
+
+# ** Emphasis on PHQ1
+#get relevant columns
+dataset_phq1 <- dataset %>%
+  select(1, 2, 29, 30, 31, 32, 33)
+
+head(dataset_phq1)
+tail(dataset_phq1)
+
+#pop mean
+pop_PHQ1_mean <- mean(dataset_phq1$PHQ1) # 1.33
+
+pop_PHQ1_mean
+
+#mean by school
+sw_17 <- dataset_phq1 %>%
+  select(everything()) %>%
+  group_by(School) %>%
+  summarise(Mean = mean(PHQ1))
+
+sw_17
+
+#mean by age
+sw_18 <- dataset_phq1 %>%
+  select(everything()) %>%
+  group_by(Age) %>%
+  summarise(Mean = mean(PHQ1))
+
+sw_18
+
+#mean by gender
+sw_19 <- dataset_phq1 %>%
+  select(everything()) %>%
+  group_by(Gender) %>%
+  summarise(Mean = mean(PHQ1))
+
+sw_19
+
+#mean by tribe
+sw_20 <- dataset_phq1 %>%
+  select(everything()) %>%
+  group_by(Tribe) %>%
+  summarise(Mean = mean(PHQ1))
+
+sw_20

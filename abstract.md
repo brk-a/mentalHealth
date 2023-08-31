@@ -6,12 +6,46 @@ by F Njakai
 
 ## Findings
 
-### general
+### overall
+
+#### PHQ
+
+##### PHQ overall
+* the average score is 9.23; that is on average, respondents self-reported moderate depression
+* the average score for each level of severity vis-a-vis the mid-points of the cut-offs viz:
+
+    |severity|mean|cut-off midpoint|
+    |:---|:---:|:---:|
+    |mild|2.54|2|
+    |moderate|6.90|7.5|
+    |moderate-severe|11.70|12|
+    |severe|17.6|19.5|
+
+* respondents from resource-poor schools have a higher average score than those from richer schools; this score (9.54) is higher than the average for all respondents (9.23)
+* respondents aged 12-21, exclusive, have mean scores that are reasonably consistent with the average for all respondents. The following are not consistent: 
+    * mean score of 12 for age 21
+    * mean score of 24 for age 22
+    * mean score of 23 for age 25
+* respondents of minority tribe(s), on average, scored higher than those of majority tribe(s); the average score for minority tribe(s) is 9.33 (which is higher than the average for all respondents) and that of majority tribe(s) is 9.02
+* female respondents, on average, scored higher than males; the average score for females is 9.57 (which is higher than the average for all respondents) and that of males is 8.87
+
+##### PHQ1
+* the average score is 1.33 out of 3
+* respondents from two out of five schools in the survey scored, on average, higher than the average of all respondents; said scores are 1.45 and 1.46
+* respondents aged 13-22, exclusive, have mean scores that are reasonably consistent with the average for all respondents. The following are not consistent:
+    * mean score of 0 for age 12 and 20.5
+    * mean score of 1.6 for age 19
+    * mean score of 3 for age 22
+    * mean score of 2 for age 25
+* respondents of minority tribe(s), on average, scored higher than those of majority tribe(s); the average score for minority tribe(s) is 1.37 (which is higher than the average for all respondents) and that of majority tribe(s) is 1.25
+* male respondents, on average, scored higher than females; the average score for males is 1.37 (which is higher than the average for all respondents) and that of females is 1.29
+
+#### GAD
 * 27.2% of respondents have minimal GAD; 35.4% have mild, 24.9% have moderate and 12.5% have severe GAD
 * majority of respondents are from rich and medium-resource schools; 42.4% rich, 32.2% medium and 25.4% poor
 * an overwhelming majority of respondents are of age 14-19, inclusive; they account for 88% of respondents
 * respondents are almost evenly split with regard to gender; 48.6% of respondents are male, 51.4% are female
-* _c._ two of every three respondents is from a minority tribe; 65.5% minority, 34.5% majority
+* _c._ two of every three respondents are from a minority tribe; 65.5% minority, 34.5% majority
 
 ### severity against select demographics
 
@@ -19,7 +53,7 @@ by F Njakai
 * across all severity levels, respondents aged 14-17, inclusive, are the overwhelming majority. respondents aged 14-19, inclusive, account for 88% of respondents, therefore, it is reasonable that, statistically, the 14-17 group has the observations it exhibits
 
     |severity|proportion aged 14-17 (%)|
-    |:---:|:---:|
+    |:---|:---:|
     |minimal|89.4|
     |mild|89.2|
     |moderate|86.6|
@@ -28,7 +62,7 @@ by F Njakai
 * the age range across severity levels viz
 
     |severity|age range|
-    |:---:|:---:|
+    |:---|:---:|
     |minimal|12-21|
     |mild|13-23|
     |moderate|13-19|
@@ -41,7 +75,7 @@ by F Njakai
 * male respondents make a majority in the severity levels `minimal` and `mild` and a minority in the levels `moderate` and `severe`
 
     |severity|%female|%male|
-    |:---:|:---:|:---:|
+    |:---|:---:|:---:|
     |minimal|49.4|50.6|
     |mild|46.4|53.6|
     |moderate|51.8|48.2|
@@ -51,10 +85,10 @@ by F Njakai
 
 #### severity and tribe
 
-* respndents from minority tribe(s) make a majority across all severity levels; the differences between tribes is large
+* respondents from minority tribe(s) make a majority across all severity levels; the differences between tribes is large
 
     |severity|%majority|%minority|
-    |:---:|:---:|:---:|
+    |:---|:---:|:---:|
     |minimal|33.5|66.5|
     |mild|42.5|57.5|
     |moderate|29.3|70.7|
@@ -62,10 +96,10 @@ by F Njakai
 
 #### severity and school resources
 
-* respondents from less-resourced schools make a majority of respondents in each severity level; 52% of those that reported minimal and 46.3% of those that reported severe GAD levels are from poor schools
+* respondents from less-resourced schools make a majority of respondents in each severity level; 52% of those that reported minimal and 46.3% of those that reported severe GAD levels are from resource-poor schools
 
     |severity|%rich|%medium|%poor|
-    |:---:|:---:|:---:|:---:|
+    |:---|:---:|:---:|:---:|
     |minimal|30.7|17.3|52.0|
     |mild|34.8|25.8|39.5|
     |moderate|32.9|32.9|34.1|
@@ -79,14 +113,14 @@ by F Njakai
   
     ||Tribe|Gender|Age|School_Resources|Severity|
     |:---:|:---:|:---:|:---:|:---:|:---:| 
-    |Tribe           | 1.00000000|-0.06649228|-0.1547092|-0.4697763|-0.09551923|
-    |Gender          |-0.06649228| 1.00000000| 0.1310904| 0.1225617|-0.10956822|
-    |Age             |-0.15470924| 0.13109041| 1.0000000| 0.3646377| 0.14902258|
-    |School_Resources|-0.46977631| 0.12256171| 0.3646377| 1.0000000| 0.10230336|
-    |Severity        |-0.09551923|-0.10956822| 0.1490226| 0.1023034| 1.00000000|
+    |Tribe           | 1.00|-0.07|-0.15|-0.47|-0.10|
+    |Gender          |-0.07| 1.00| 0.13| 0.12|-0.11|
+    |Age             |-0.15| 0.13| 1.00| 0.36| 0.15|
+    |School_Resources|-0.47| 0.12| 0.36| 1.00| 0.10|
+    |Severity        |-0.10|-0.11| 0.15| 0.10| 1.00|
 
 * the most positive is age (0.15) and the most negative is gender (-0.11)
-    * to some extent, the older a respondent is the more likely it to have more severe GAD
+    * to some extent, the older a respondent is the more likely s/he is to have more severe GAD
 
 ## About GAD
 
@@ -283,6 +317,99 @@ by F Njakai
 |Severe  |Medium|22|26.8|
 |Severe  |Poor  |22|26.8|
 |Severe  |Rich  |38|46.3|
+
+10. Occurrence of PHQ by severity
+
+|Severity|Mean|
+|:---:|:---:|
+|Mild           | 2.54|
+|Moderate       | 6.90|
+|Moderate-severe|11.7 |
+|Severe         |17.6 |
+
+11. Occurrence of PHQ by school resources
+
+|School_Resources|Mean|
+|:---:|:---:|
+|Medium|9.06|
+|Poor  |9.54|
+|Rich  |9.17|
+
+12. Occurrence of PHQ by age
+
+|Age|Mean|
+|:---:|:---:|
+|12  | 6   |
+|13  | 6.69|
+|14  | 7.52|
+|15  | 9.16|
+|16  | 9.49|
+|17  | 9.94|
+|18  | 9.71|
+|19  |10   |
+|20  | 8.67|
+|20.5| 5   |
+|21  |12   |
+|22  |24   |
+|23  | 8   |
+|25  |23|
+
+13. Occurrence of PHQ by age
+
+|Gender|Mean|
+|:---:|:---:|
+|F|9.57|
+|M|8.87|
+
+13. Occurrence of PHQ by tribe
+
+|Tribe|Mean|
+|:---:|:---:|
+|Majority|9.02|
+|Minority|9.33|
+
+14. Mean of PHQ1 by school
+
+|School|Mean|
+|:---:|:---:|
+|AGHS   |1.32|
+|AHS    |1.16|
+|Elite  |1.45|
+|Olympic|1.33|
+|Starays|1.46|
+
+15. Mean of PHQ1 by age
+
+|Age|Mean|
+|:---:|:---:|
+|12  |0    |
+|13  |0.846|
+|14  |1.07 |
+|15  |1.31 |
+|16  |1.37 |
+|17  |1.44 |
+|18  |1.48 |
+|19  |1.6  |
+|20  |1.33 |
+|20.5|0    |
+|21  |1    |
+|22  |3    |
+|23  |1    |
+|25  |2    |
+
+16. Mean of PHQ1 by gender
+
+|Gender|Mean|
+|:---:|:---:|
+|F|1.29|
+|M|1.37|
+
+17. Mean of PHQ1 by tribe
+
+|Tribe|Mean|
+|:---:|:---:|
+|Majority|1.25|
+|Minority|1.37|
 
 [def]: https://www.linkedin.com/in/fnjakai
 [def2]: https://www.github.com/brk-a
