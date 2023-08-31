@@ -5,13 +5,16 @@ by F Njakai
 [LinkedIn][def] | [Github][def2]
 
 ## Findings
+
 ### general
 * 27.2% of respondents have minimal GAD; 35.4% have mild, 24.9% have moderate and 12.5% have severe GAD
 * majority of respondents are from rich and medium-resource schools; 42.4% rich, 32.2% medium and 25.4% poor
 * an overwhelming majority of respondents are of age 14-19, inclusive; they account for 88% of respondents
 * respondents are almost evenly split with regard to gender; 48.6% of respondents are male, 51.4% are female
 * _c._ two of every three respondents is from a minority tribe; 65.5% minority, 34.5% majority
+
 ### severity against select demographics
+
 #### severity and age
 * across all severity levels, respondents aged 14-17, inclusive, are the overwhelming majority. respondents aged 14-19, inclusive, account for 88% of respondents, therefore, it is reasonable that, statistically, the 14-17 group has the observations it exhibits
 
@@ -32,7 +35,9 @@ by F Njakai
     |severe|13-25|
 
     notice how the respondents under `moderate` severity are strictly teenagers
+
 #### severity and gender
+
 * male respondents make a majority in the severity levels `minimal` and `mild` and a minority in the levels `moderate` and `severe`
 
     |severity|%female|%male|
@@ -43,7 +48,9 @@ by F Njakai
     |severe|67.1|32.9|
 
     the differences between genders in the groups where males are in the majority is smaller than those where the females are in the majority
+
 #### severity and tribe
+
 * respndents from minority tribe(s) make a majority across all severity levels; the differences between tribes is large
 
     |severity|%majority|%minority|
@@ -54,6 +61,7 @@ by F Njakai
     |severe|30.5|69.5|
 
 #### severity and school resources
+
 * respondents from less-resourced schools make a majority of respondents in each severity level; 52% of those that reported minimal and 46.3% of those that reported severe GAD levels are from poor schools
 
     |severity|%rich|%medium|%poor|
@@ -66,6 +74,7 @@ by F Njakai
 * in the `moderate` and `severe` levels, there are as many respondents from resource-rich schools as those from schools with medium resources: 32.9% unser `moderate`  and 26.8% under `severe`
 
 #### severity and all demographic characteristics
+
 * there is weak correlation between severity and all demographic characteristics
   
     ||Tribe|Gender|Age|School_Resources|Severity|
@@ -80,28 +89,49 @@ by F Njakai
     * to some extent, the older a respondent is the more likely it to have more severe GAD
 
 ## About GAD
+
 ### what is GAD?
+
 * GAD is a long-term condition that causes a patientto feel anxious about a wide range of situations and issues rather than one specific event
 * People with GAD feel anxious most days and often struggle to remember the last time they felt relaxed
 * As soon as one anxious thought is resolved, another may appear about a different issue
+
 ### what does the GAD score measure?
+
 * One's proclivity to have excessive, uncontrollable and often irrational worry about events or activities
+
 ### why is GAD important as a measure of mental wellness?
+
 * It is an efficient tool for screening for GAD and assessing its severity in clinical practice and research
+
 ## Method
+
 ### flow
+
 * consume dataset
 * clean dataset
 * perform simple EDA
 * create a correlogram of severity levels against demographic characteristics
 * create an abstract
+
 ## Data set
+
 * 658 variables of 33 observations
+
 ### missing values
+
 * the data-set is imputed, therefore, there are no missing values
+
 ### imputed data-set
+
 * not able to determine what type of imputation has been used
+
+## Visualisations
+
+<img src="./corr_plot.png" alt="corr_plot"/>
+
 ## Sources
+
 1. [Datrtmouth-Hitchcock][def3]
 2. [Brief measures][def4]
 3. [MIRECC][def5]
@@ -109,9 +139,6 @@ by F Njakai
 5. [NIMH - US][def7]
 6. [AAFP - US][def8]
 7. [NLM - US][def9]
-
-## Visualisations
-<img src="./corr_plot.png" alt="corr_plot"/>
 
 ## Tables
 
