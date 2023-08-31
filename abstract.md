@@ -2,18 +2,18 @@
 
 by F Njakai
 
-[LinkedIn]() | [Github]()
+[LinkedIn][def] | [Github][def2]
 
 ## Findings
 ### general
-* 27.2% of respondents have minimal GAD; 35.4% mild, 24.9% moderate and 12.5% have severe GAD
+* 27.2% of respondents have minimal GAD; 35.4% have mild, 24.9% have moderate and 12.5% have severe GAD
 * majority of respondents are from rich and medium-resource schools; 42.4% rich, 32.2% medium and 25.4% poor
 * an overwhelming majority of respondents are of age 14-19, inclusive; they account for 88% of respondents
 * respondents are almost evenly split with regard to gender; 48.6% of respondents are male, 51.4% are female
 * _c._ two of every three respondents is from a minority tribe; 65.5% minority, 34.5% majority
 ### severity against select demographics
 #### severity and age
-* across all severity levels, respondents aged 14-17, inclusive, are the overwhelming majority. respondents aged 14-19, inclusive account for 88% of respondents, therefore, it is reasonable that, statistically, the 14-17 group has the observations it exhibits
+* across all severity levels, respondents aged 14-17, inclusive, are the overwhelming majority. respondents aged 14-19, inclusive, account for 88% of respondents, therefore, it is reasonable that, statistically, the 14-17 group has the observations it exhibits
 
     |severity|proportion aged 14-17 (%)|
     |:---:|:---:|
@@ -63,30 +63,52 @@ by F Njakai
     |moderate|32.9|32.9|34.1|
     |severe|26.8|26.8|46.3|
 
+* in the `moderate` and `severe` levels, there are as many respondents from resource-rich schools as those from schools with medium resources: 32.9% unser `moderate`  and 26.8% under `severe`
+
+#### severity and all demographic characteristics
+* there is weak correlation between severity and all demographic characteristics
+  
+    ||Tribe|Gender|Age|School_Resources|Severity|
+    |:---:|:---:|:---:|:---:|:---:|:---:| 
+    |Tribe           | 1.00000000|-0.06649228|-0.1547092|-0.4697763|-0.09551923|
+    |Gender          |-0.06649228| 1.00000000| 0.1310904| 0.1225617|-0.10956822|
+    |Age             |-0.15470924| 0.13109041| 1.0000000| 0.3646377| 0.14902258|
+    |School_Resources|-0.46977631| 0.12256171| 0.3646377| 1.0000000| 0.10230336|
+    |Severity        |-0.09551923|-0.10956822| 0.1490226| 0.1023034| 1.00000000|
+
+* the most positive is age (0.15) and the most negative is gender (-0.11)
+    * to some extent, the older a respondent is the more likely it to have more severe GAD
+
 ## About GAD
 ### what is GAD?
-
+* GAD is a long-term condition that causes a patientto feel anxious about a wide range of situations and issues rather than one specific event
+* People with GAD feel anxious most days and often struggle to remember the last time they felt relaxed
+* As soon as one anxious thought is resolved, another may appear about a different issue
 ### what does the GAD score measure?
-
+* One's proclivity to have excessive, uncontrollable and often irrational worry about events or activities
 ### why is GAD important as a measure of mental wellness?
-
+* It is an efficient tool for screening for GAD and assessing its severity in clinical practice and research.
 ## Method
 ### flow
-
-### 
-
+* consume dataset
+* clean dataset
+* perform simple EDA
+* create a correlogram of severity levels against demographic characteristics
+* create an abstract
 ## Data set
 * 658 variables of 33 observations
 ### missing values
 * the data-set is imputed, therefore, there are no missing values
 ### imputed data-set
 * not able to determine what type of imputation has been used
-
 ## Sources
-1. [](https://www.dartmouth-hitchcock.org/sites/default/files/2021-02/gad-7-anxiety-scale.pdf)
-2. [](https://briefmeasures.org/gad-7-scale-and-scoring.html)
-3. [](https://www.mirecc.va.gov/cih-visn2/Documents/Clinical/GAD_with_Info_Sheet.pdf)
-4. 
+1. [Datrtmouth-Hitchcock][def3]
+2. [Brief measures][def4]
+3. [MIRECC][def5]
+4. [NHS - UK][def6]
+5. [NIMH - US][def7]
+6. [AAFP - US][def8]
+7. [NLM - US][def9]
 
 
 ## Tables
@@ -232,3 +254,13 @@ by F Njakai
 |Severe  |Medium|22|26.8|
 |Severe  |Poor  |22|26.8|
 |Severe  |Rich  |38|46.3|
+
+[def]: https://www.linkedin.com/in/fnjakai
+[def2]: https://www.github.com/brk-a
+[def3]: https://www.dartmouth-hitchcock.org/sites/default/files/2021-02/gad-7-anxiety-scale.pdf
+[def4]: https://briefmeasures.org/gad-7-scale-and-scoring.html
+[def5]: https://www.mirecc.va.gov/cih-visn2/Documents/Clinical/GAD_with_Info_Sheet.pdf
+[def6]: https://www.nhs.uk/mental-health/conditions/generalised-anxiety-disorder/overview/
+[def7]: https://www.nimh.nih.gov/health/statistics/generalized-anxiety-disorder
+[def8]: https://www.aafp.org/pubs/afp/issues/2009/0501/p785.html
+[def9]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5542568/

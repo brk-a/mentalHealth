@@ -119,23 +119,24 @@ sw_9 <- sw_0 %>%
 
 sw_9
 
-# ** prepare numerical variables and factor variable
-#numerical and factor variables
-data <- dataset[2:8] # Numerical variables
-groups <- dataset[9:12] #Factor variables
 
-#see if each loaded
-head(data)
-head(groups)
+# ** create a correlation heatmap of severity and demographic characteristics
+#turn factor vars to numeric
+sw_10 <- sw_0 %>%
+  select(9,10, 11,12, 14 ) %>%
+  mutate(Gender = recode(Gender, M = 1, F = 0)) %>%
+  mutate(Tribe = recode(Tribe, Majority = 1, Minority = 0)) %>%
+  mutate(School_Resources = recode(School_Resources, Poor = 2, Medium = 1, Rich = 0)) %>%
+  mutate(Severity = recode(Severity, Minimal = 0, Mild = 1, Moderate = 2, Severe = 3)) %>%
+  mutate_if(is.character, as.numeric)
 
-#create a correlogram of GAD scores
-pairs(data,                     # Data frame of variables
-      labels = colnames(data),  # Variable names
-      pch = 22,                 # Pch symbol
-      bg = rainbow(length(5),   # Background colour of the symbol (pch 21 to 25)
-      col = rainbow(5),  # Border colour of the symbol
-      main = "GAD scores",      # Title of the plot
-      row1attop = TRUE,         # If FALSE, changes the direction of the diagonal
-      gap = 1,                  # Distance between subplots
-      cex.labels = NULL,        # Size of the diagonal text
-      font.labels = 1)          # Font style of the diagonal text
+head(sw_10)
+
+# calculate the correlation matrix
+cor_matrix <- cor(sw_10)
+
+# create a basic correlation heatmap using corrplot
+if (!require(corrplot)) install.packages("corrplot", repos='http://cran.us.r-project.org', dependencies=T)
+library(corrplot)
+corrplot(cor_matrix, method="color", order='hclust', addrect=2, addCoef.col = 'black', tl.pos = 'd',
+         cl.pos = 'r', col = COL2('RdYlBu'))
