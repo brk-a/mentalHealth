@@ -412,7 +412,7 @@ by F Njakai
 |Minority|1.37|
 
 [def]: https://www.linkedin.com/in/fnjakai
-[def2]: https://www.github.com/brk-a
+[def2]: https://github.com/brk-a/mentalHealth/blob/main/main.r
 [def3]: https://www.dartmouth-hitchcock.org/sites/default/files/2021-02/gad-7-anxiety-scale.pdf
 [def4]: https://briefmeasures.org/gad-7-scale-and-scoring.html
 [def5]: https://www.mirecc.va.gov/cih-visn2/Documents/Clinical/GAD_with_Info_Sheet.pdf
