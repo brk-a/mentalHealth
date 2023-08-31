@@ -162,6 +162,8 @@ by F Njakai
 
 ## Visualisations
 
+    Correlogram showing how each demographic characteristic and severity correlate
+
 <img src="./corr_plot.png" alt="corr_plot"/>
 
 ## Sources
