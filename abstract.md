@@ -87,7 +87,7 @@ by F Njakai
 ### what does the GAD score measure?
 * One's proclivity to have excessive, uncontrollable and often irrational worry about events or activities
 ### why is GAD important as a measure of mental wellness?
-* It is an efficient tool for screening for GAD and assessing its severity in clinical practice and research.
+* It is an efficient tool for screening for GAD and assessing its severity in clinical practice and research
 ## Method
 ### flow
 * consume dataset
@@ -110,6 +110,8 @@ by F Njakai
 6. [AAFP - US][def8]
 7. [NLM - US][def9]
 
+## Visualisations
+<img src="./corr_plot.png" alt="corr_plot"/>
 
 ## Tables
 
