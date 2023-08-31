@@ -216,7 +216,7 @@ by F Njakai
 |Severe  |Minority| 57|69.5|
 
 
-9. 
+9. Occurrence of GAD by school resources, grouped by severity
 
 |Severity|School_Resources|Freq|Percentage|
 |:---:|:---:|:---:|:---:|
